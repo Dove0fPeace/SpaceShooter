@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9150253798611739159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9150253798611739157}
+  - component: {fileID: 9150253798611739156}
+  - component: {fileID: 9150253798611739154}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9150253798611739157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150253798611739159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1198.1848, y: 426.9481, z: -170.22406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9150253798611739156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150253798611739159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e1611114c5b7841b482ed8de0fd554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TargetShip: {fileID: 0}
+  m_VirtualJoystick: {fileID: 0}
+  m_MobileFirePrimary: {fileID: 0}
+  m_MobileFireSecondary: {fileID: 0}
+  m_ControlMode: 1
+--- !u!114 &9150253798611739154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150253798611739159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67ec3940c4353f43bdf0958562442d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DontDestroyOnLoad: 0
+  m_NumLives: 3
+  m_Coins: 0
+  m_Ship: {fileID: 0}
+  m_PlayerShipPrefab: {fileID: 5556977492666331291, guid: 1161b949f7c13e34f88d66a7e5dbf0a5, type: 3}
+  m_ExplosionPrefab: {fileID: 3908114075367041742, guid: 9fc293dbc0f4c1a4e8d13cfd0a57548d, type: 3}
+  vcam: {fileID: 0}
+  m_MovementController: {fileID: 9150253798611739156}

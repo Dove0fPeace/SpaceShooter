@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6192019827025467921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5413199681401816606}
+  - component: {fileID: 3041918837084787093}
+  - component: {fileID: 6065035664550627587}
+  - component: {fileID: 1814609391341740198}
+  - component: {fileID: 3823614953887193368}
+  m_Layer: 8
+  m_Name: AsterHuge3
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5413199681401816606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192019827025467921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3041918837084787093
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192019827025467921}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300004, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.04, y: 2.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!60 &6065035664550627587
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192019827025467921}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.04, y: 2.8}
+    newSize: {x: 3.04, y: 2.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.2725666, y: -0.68513256}
+      - {x: 1.3788489, y: -0.5405602}
+      - {x: 1.3782592, y: -0.33427706}
+      - {x: 1.52, y: -0.18003017}
+      - {x: 1.5149994, y: -0.115234286}
+      - {x: 1.3685559, y: 0.062271073}
+      - {x: 1.1862842, y: 0.24684334}
+      - {x: 1.0597286, y: 0.24895895}
+      - {x: 1.1359874, y: 0.734277}
+      - {x: 0.95092773, y: 0.9242469}
+      - {x: 0.8805613, y: 0.9651324}
+      - {x: 0.554277, y: 0.9834217}
+      - {x: 0.36799276, y: 1.2085543}
+      - {x: 0.035428084, y: 1.2239816}
+      - {x: -0.16631271, y: 1.4}
+      - {x: -0.3125666, y: 1.3176988}
+      - {x: -0.5617104, y: 1.2439818}
+      - {x: -0.814277, y: 1.3085543}
+      - {x: -0.8822193, y: 1.028434}
+      - {x: -1.1594102, y: 0.9691446}
+      - {x: -1.2497051, y: 0.60171086}
+      - {x: -1.4251313, y: 0.45312643}
+      - {x: -1.5108542, y: 0.3485542}
+      - {x: -1.4056926, y: 0.19203621}
+      - {x: -1.3856926, y: 0.057168722}
+      - {x: -1.4360008, y: -0.19649687}
+      - {x: -1.4051331, y: -0.3834217}
+      - {x: -1.3159875, y: -0.47256625}
+      - {x: -1.1422718, y: -0.5542771}
+      - {x: -1.1297051, y: -0.82227105}
+      - {x: -0.97542804, y: -0.9914157}
+      - {x: -0.7399368, y: -0.9836771}
+      - {x: -0.5588489, y: -1.1651325}
+      - {x: -0.4426918, y: -1.0839365}
+      - {x: -0.18171042, y: -1.1897049}
+      - {x: 0.08171272, y: -1.2491143}
+      - {x: 0.2966095, y: -1.3817109}
+      - {x: 0.57371765, y: -1.2856928}
+      - {x: 0.7925666, y: -1.2942772}
+      - {x: 0.8497051, y: -1.1805604}
+      - {x: 0.8451519, y: -0.94941765}
+      - {x: 1.0479946, y: -0.86513245}
+      - {x: 1.1999999, y: -0.7959879}
+--- !u!50 &1814609391341740198
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192019827025467921}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3823614953887193368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6192019827025467921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a05417634928d34aad7caf469d19351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Nickname: 
+  m_Indestructible: 0
+  m_HitPoints: 200
+  m_EventOnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SmallAsteroid:
+  - {fileID: 7501200752236333361, guid: 18bb600265b4a4a4fa29f69b9f5b8404, type: 3}
+  - {fileID: 631011889665268495, guid: 5c3659959ebb30a489d7eef3009f8afc, type: 3}
+  - {fileID: 7963962954106302592, guid: 0cc97290e5be8a24a95be78aef2fc1a6, type: 3}
+  - {fileID: 8064902861048752216, guid: 0d18f1a7832f6a44fa77efb30bde703e, type: 3}
+  m_Speed: 1
+  m_SmallAsteroidsNum: 2

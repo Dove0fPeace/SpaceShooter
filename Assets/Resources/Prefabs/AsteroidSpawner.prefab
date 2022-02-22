@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6486446513099717082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6486446513099717079}
+  - component: {fileID: 6486446513099717080}
+  - component: {fileID: 6486446513099717081}
+  m_Layer: 0
+  m_Name: AsteroidSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6486446513099717079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486446513099717082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6486446513099717080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486446513099717082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8e6ec9c91d28f40bf17cc46ad34361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Radius: 25
+--- !u!114 &6486446513099717081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486446513099717082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ee05b61e70e3d4cae53dc90279da14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DebrisPrefabs:
+  - {fileID: 7501200752236333361, guid: 18bb600265b4a4a4fa29f69b9f5b8404, type: 3}
+  - {fileID: 631011889665268495, guid: 5c3659959ebb30a489d7eef3009f8afc, type: 3}
+  - {fileID: 7963962954106302592, guid: 0cc97290e5be8a24a95be78aef2fc1a6, type: 3}
+  - {fileID: 8064902861048752216, guid: 0d18f1a7832f6a44fa77efb30bde703e, type: 3}
+  - {fileID: 8030003980075580514, guid: a928b6b7e9852c6429b1e3022b0ca7ed, type: 3}
+  - {fileID: 4629310940122444789, guid: 70c536de7d9d92449ae52a7ff80766e1, type: 3}
+  - {fileID: 3823614953887193368, guid: 46fd36c0039a3de4e8a017dd1652a1c9, type: 3}
+  - {fileID: 4006039779615764610, guid: ae4d463454dcd3f4f8546cef1366ff03, type: 3}
+  - {fileID: 9079078751327561695, guid: a605a9cb8e6a23444baef3434392fdb5, type: 3}
+  - {fileID: -3665721689907514535, guid: 10eda568a7de7e04693212985f98844e, type: 3}
+  - {fileID: 1784834549587079152, guid: a4f6c7d73f99033429f262bcba1bdeb8, type: 3}
+  - {fileID: 9117428709041185607, guid: 65ee5b4a801d6d44eb112962bd3246e2, type: 3}
+  m_Area: {fileID: 6486446513099717080}
+  m_NumDebris: 5
+  m_RandomSpeed: 1
