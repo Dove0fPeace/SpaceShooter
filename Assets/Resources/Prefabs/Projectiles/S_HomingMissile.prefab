@@ -4831,7 +4831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7309142850555308545}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.403, z: -0}
+  m_LocalPosition: {x: 0.017, y: -0.23, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6055654194933172552}
@@ -9653,7 +9653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8021095741482558215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1862755934809571812}
@@ -9700,7 +9700,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d3dc5039e9a6b84db409d9cfd773701, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5f5c48e267e8ba45bf512eb80c11b36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9740,6 +9740,7 @@ MonoBehaviour:
   m_Velocity: 8
   m_Lifetime: 10
   m_Damage: 100
+  m_Player: {fileID: 0}
   m_ImpactEffectPrefab: {fileID: 2736426535847983937, guid: f746926e2b3e6ce459668c98d801e56a, type: 3}
   m_Area: {fileID: 540009480307573854}
   m_RotateSpeed: 200
@@ -9756,8 +9757,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004491806, y: 0}
-  m_Size: {x: 0.13331461, y: 0.9246154}
+  m_Offset: {x: 0.007503152, y: 0.097977586}
+  m_Size: {x: 0.32636458, y: 0.51317227}
   m_Direction: 0
 --- !u!50 &8757345551394536668
 Rigidbody2D:

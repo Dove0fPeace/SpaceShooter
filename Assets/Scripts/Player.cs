@@ -41,11 +41,11 @@ namespace SpaceShooter
         private void OnShipDeath()
         {
             m_NumLives--;
-            var Explode = Instantiate(m_ExplosionPrefab, m_ExplosionPosition, m_ExplosionRotation );
+            var Explode = Instantiate(m_ExplosionPrefab, m_ExplosionPosition, m_ExplosionRotation);
 
             if (m_NumLives > 0)
                 Invoke("Respawn", 1);
-                Debug.Log("resp");
+            Debug.Log("resp");
         }
 
         private void Respawn()
@@ -63,6 +63,24 @@ namespace SpaceShooter
             m_Coins += coin;
             Debug.Log(CurrentCoins);
         }
+
+        #region Score
+
+        public int Score { get; private set; }
+        public int NumKills { get; private set; }
+
+        public void AddKill()
+        {
+            NumKills++;
+        }
+
+        public void AddScore(int num)
+        {
+            Score += num;
+            Debug.Log(Score);
+        }
+
+        #endregion
     }
 
 }

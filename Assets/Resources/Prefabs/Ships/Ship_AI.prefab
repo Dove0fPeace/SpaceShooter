@@ -119,14 +119,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfb8187ddde26c438e5f526700a0b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Area: {fileID: 3947240740036163856}
   m_AIBehaviour: 1
   m_PatrolPoint: {fileID: 0}
   m_Waypoint: {fileID: 0}
-  m_NavigationLinear: 0.42
-  m_NavigationAngular: 0.472
+  m_NavigationLinear: 0.297
+  m_NavigationAngular: 0.389
   m_RandomSelectMovePointTime: 10
   m_FindNewTargetTime: 2
-  m_ShootDelay: 5
+  m_ShootDelay: 2
   m_EvadeRayLenght: 3
   m_EvadeDelay: 1
 --- !u!114 &4531451122860661833
@@ -143,12 +144,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Nickname: Enemy
   m_TeamID: 2
-  m_PredictionMultiply: 1.3
+  m_PredictionMultiply: 1.4
   m_Indestructible: 0
   m_HitPoints: 100
   m_EventOnDeath:
     m_PersistentCalls:
       m_Calls: []
+  m_ScoreValue: 1
   m_Mass: 2
   m_Trust: 600
   m_Mobility: 1000
@@ -190,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8e6ec9c91d28f40bf17cc46ad34361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Radius: 12
+  m_Radius: 14
 --- !u!1 &2585255776107582317
 GameObject:
   m_ObjectHideFlags: 0

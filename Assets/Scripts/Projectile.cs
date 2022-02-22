@@ -12,7 +12,10 @@ namespace SpaceShooter
 
         [SerializeField] private int m_Damage;
 
+        [SerializeField] private GameObject m_Player;
+
         [SerializeField] private ImpactEffect m_ImpactEffectPrefab;
+
 
         protected float m_Timer;
 
@@ -53,7 +56,10 @@ namespace SpaceShooter
         {
             Destructible dest = collision.transform.root.GetComponent<Destructible>();
             if (dest != null)
+            {
                 dest.ApplyDamage(m_Damage);
+                Player.Instance.AddScore(dest.ScoreValue);
+            }
             OnProjectileLifeEnd();
         }
     }

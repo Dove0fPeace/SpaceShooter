@@ -104,7 +104,6 @@ namespace SpaceShooter
         {
             m_Waypoint = point;
             m_MovePosition = m_Waypoint.transform.position;
-            Debug.Log("Next move position");
         }
         private void UpdateAI()
         {
@@ -158,7 +157,6 @@ namespace SpaceShooter
                 isEvade = true;
                 _EvadeTimer.Start(m_EvadeDelay);             
                 m_MovePosition = transform.position + transform.right * 1.0f;
-                Debug.Log("Evade");
             }
             
             else
@@ -166,7 +164,6 @@ namespace SpaceShooter
                 if(_EvadeTimer.IsFinished)
                 {
                     isEvade = false;
-                    Debug.Log("Move");
                 }
             }
         }

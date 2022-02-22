@@ -92,5 +92,11 @@ namespace SpaceShooter
         {
             m_AllDestructibles.Remove(this);
         }
+        #region Score
+
+        [SerializeField] private int m_ScoreValue;
+        public int ScoreValue => m_ScoreValue;
+
+        #endregion
     }
 }
