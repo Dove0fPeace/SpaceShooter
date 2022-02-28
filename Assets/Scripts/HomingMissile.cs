@@ -8,7 +8,6 @@ namespace SpaceShooter
     public class HomingMissile : Projectile
     {
         [SerializeField] private CircleArea m_Area;
-        //[SerializeField] private ClosestEnemyFinder m_Finder;
         [SerializeField] private float m_RotateSpeed;
 
         private Rigidbody2D rb;
@@ -21,7 +20,6 @@ namespace SpaceShooter
             rb = GetComponent<Rigidbody2D>();
 
             m_Target = FindClosestByTag("Enemy");
-            Debug.Log(m_Target.name);
         }
 
         protected override void FixedUpdate()
@@ -43,7 +41,6 @@ namespace SpaceShooter
             }
             else
             {
-                Debug.Log("Regular fire");
                 base.FixedUpdate();
             }
         }

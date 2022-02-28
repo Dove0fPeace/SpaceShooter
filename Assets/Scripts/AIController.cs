@@ -62,7 +62,6 @@ namespace SpaceShooter
 
             InitTimers();
 
-            //m_SelectTarget = FindNearestDestructibleTarget();
         }
 
         private void FixedUpdate()

@@ -9946,6 +9946,7 @@ MonoBehaviour:
   - {fileID: 4502770628963380971}
   m_Bubble: {fileID: 804390872179925120}
   IsSpeedBoosted: 0
+  m_IsPlayerShip: 1
 --- !u!114 &807228790112384100
 MonoBehaviour:
   m_ObjectHideFlags: 0

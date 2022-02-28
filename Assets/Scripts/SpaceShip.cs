@@ -36,6 +36,8 @@ namespace SpaceShooter
         private float BaseThrust;
         private float BaseMobility;
 
+        [SerializeField] private bool m_IsPlayerShip;
+
         #region Public API
 
         public float TrustControl { get; set; }
@@ -47,7 +49,7 @@ namespace SpaceShooter
             {
                 if (m_Turrets[i].Mode == mode)
                 {
-                    m_Turrets[i].Fire();
+                    m_Turrets[i].Fire(m_IsPlayerShip);
                 }
             }
         }

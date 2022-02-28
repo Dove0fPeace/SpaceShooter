@@ -12,9 +12,11 @@ namespace SpaceShooter
 
         [SerializeField] private int m_Damage;
 
-        [SerializeField] private GameObject m_Player;
-
         [SerializeField] private ImpactEffect m_ImpactEffectPrefab;
+
+        //При создании проджектайла ему передается булевое значение выпущен ли этот проджектайл игроком.
+        //Если да, то очки засчитаются даже если в полете корабль игрока уничтожат, потому что это значение передается при создании проджектайла, а не идет проверка при столкновении.
+        public bool IsPlayerProjectile;
 
 
         protected float m_Timer;
@@ -23,17 +25,6 @@ namespace SpaceShooter
         {
             float stepLenght = Time.deltaTime * m_Velocity;
             Vector2 step = transform.up * stepLenght;
-
-            //RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, stepLenght);
-            //if(hit)
-            //{
-            //    Destructible dest = hit.collider.transform.root.GetComponent<Destructible>();
-            //    if(dest != null && dest != m_Parent)
-            //    {
-            //        dest.ApplyDamage(m_Damage);
-            //    }
-            //    OnProjectileLifeEnd(hit.collider, hit.point);
-            //}
 
             m_Timer += Time.deltaTime;
             if (m_Timer > m_Lifetime)
@@ -58,7 +49,11 @@ namespace SpaceShooter
             if (dest != null)
             {
                 dest.ApplyDamage(m_Damage);
-                Player.Instance.AddScore(dest.ScoreValue);
+                
+                if (IsPlayerProjectile)
+                {
+                    Player.Instance.AddScore(dest.ScoreValue);
+                }
             }
             OnProjectileLifeEnd();
         }

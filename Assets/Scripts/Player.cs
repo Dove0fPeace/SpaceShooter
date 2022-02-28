@@ -45,7 +45,6 @@ namespace SpaceShooter
 
             if (m_NumLives > 0)
                 Invoke("Respawn", 1);
-            Debug.Log("resp");
         }
 
         private void Respawn()
@@ -61,7 +60,6 @@ namespace SpaceShooter
         public void AddCoin(int coin)
         {
             m_Coins += coin;
-            Debug.Log(CurrentCoins);
         }
 
         #region Score
@@ -77,7 +75,6 @@ namespace SpaceShooter
         public void AddScore(int num)
         {
             Score += num;
-            Debug.Log(Score);
         }
 
         #endregion

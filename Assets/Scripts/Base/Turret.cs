@@ -32,7 +32,7 @@ namespace SpaceShooter
 
         #region PublicAPI
 
-        public void Fire()
+        public void Fire(bool IsPlayerShip)
         {
             if (m_TurretProperties == null) return;
             if (CanFire == false) return;
@@ -42,6 +42,7 @@ namespace SpaceShooter
                 return;
 
             Projectile projectile = Instantiate(m_TurretProperties.ProgectilePrefab).GetComponent<Projectile>();
+            projectile.IsPlayerProjectile = IsPlayerShip;
             projectile.transform.position = transform.position;
             projectile.transform.up = transform.up;
 

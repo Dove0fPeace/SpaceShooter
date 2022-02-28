@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class ScoreStats : MonoBehaviour
+namespace SpaceShooter
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ScoreStats : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private TMP_Text m_Text;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private int m_LastScore;
+
+        private void Update()
+        {
+            UpdateScore();
+        }
+
+        private void UpdateScore()
+        {
+            if(Player.Instance != null)
+            {
+                int currentScore = Player.Instance.Score;
+
+                if (m_LastScore != currentScore)
+                {
+                    m_LastScore = currentScore;
+
+                    m_Text.text = "Score : " + m_LastScore.ToString();
+                }
+            }
+        }
     }
 }
