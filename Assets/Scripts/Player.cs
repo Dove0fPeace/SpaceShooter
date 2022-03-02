@@ -52,7 +52,7 @@ namespace SpaceShooter
             if (m_NumLives > 0)
                 Invoke("Respawn", 1);
             else
-                LevelSequenceController.Instance.FinishCurrentLevel(false);
+                LevelSequenceController.Instance?.FinishCurrentLevel(false);
         }
 
         private void Respawn()

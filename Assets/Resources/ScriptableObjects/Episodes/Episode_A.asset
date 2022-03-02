@@ -15,5 +15,5 @@ MonoBehaviour:
   m_EpisodeName: Episode A
   m_Levels:
   - scene_Main
-  - scene_Main
+  - main_Menu
   m_PreviewImage: {fileID: 0}

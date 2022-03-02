@@ -10,7 +10,7 @@ namespace SpaceShooter
         bool IsCompleted { get; }
     }
 
-    public class LevelController : MonoBehaviour
+    public class LevelController : SingletonBase<LevelController>
     {
         [SerializeField] private int m_ReferenceTime;
         public int ReferenceTime => m_ReferenceTime;
@@ -27,6 +27,7 @@ namespace SpaceShooter
         private void Start()
         {
             m_Conditions = GetComponentsInChildren<ILevelCondition>();
+            m_LevelTime = 0f;
         }
 
         private void Update()
