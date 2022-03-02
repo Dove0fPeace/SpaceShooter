@@ -13,6 +13,8 @@ namespace SpaceShooter
 
         public int CurrentLevel { get; private set; }
 
+        public static SpaceShip PlayerShip {get; set;} 
+
         public void StartEpisode(Episode episode)
         {
             CurrentEpisode = episode;
@@ -30,10 +32,13 @@ namespace SpaceShooter
 
         public void FinishCurrentLevel(bool success)
         {
-
+            if(success)
+            {
+                AdvanceLevel();
+            }
         }
 
-        public void AvanceLevel()
+        public void AdvanceLevel()
         {
             CurrentLevel++;
 

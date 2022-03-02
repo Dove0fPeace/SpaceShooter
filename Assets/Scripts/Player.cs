@@ -23,10 +23,16 @@ namespace SpaceShooter
         private Vector3 m_ExplosionPosition;
         private Quaternion m_ExplosionRotation;
 
+        protected override void Awake()
+        {
+            base.Awake();
+
+            if(m_Ship != null)
+                Destroy(m_Ship.gameObject);
+        }
         private void Start()
         {
-            m_Ship.EventOnDeath.AddListener(OnShipDeath);
-            //vcam = GetComponent<CinemachineVirtualCamera>(); 
+            Respawn();
         }
 
         private void Update()
@@ -45,16 +51,21 @@ namespace SpaceShooter
 
             if (m_NumLives > 0)
                 Invoke("Respawn", 1);
+            else
+                LevelSequenceController.Instance.FinishCurrentLevel(false);
         }
 
         private void Respawn()
         {
-            var newPlayerShip = Instantiate(m_PlayerShipPrefab);
-            m_Ship = newPlayerShip.GetComponent<SpaceShip>();
-            m_Ship.EventOnDeath.AddListener(OnShipDeath);
+            if(LevelSequenceController.PlayerShip != null)
+            {
+                var newPlayerShip = Instantiate(LevelSequenceController.PlayerShip);
+                m_Ship = newPlayerShip.GetComponent<SpaceShip>();
+                m_Ship.EventOnDeath.AddListener(OnShipDeath);
 
-            vcam.Follow = m_Ship.transform;
-            m_MovementController.SetTargetShip(m_Ship);
+                vcam.Follow = m_Ship.transform;
+                m_MovementController.SetTargetShip(m_Ship);
+            }
         }
 
         public void AddCoin(int coin)

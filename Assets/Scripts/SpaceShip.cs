@@ -12,7 +12,9 @@ namespace SpaceShooter
         [SerializeField] private float m_Trust;
         [SerializeField] private float m_Mobility;
         [SerializeField] private float m_MaxLinearVelocity;
+        public float MaxLinearVelocity => m_MaxLinearVelocity;
         [SerializeField] private float m_MaxAngularVelocity;
+        public float MaxAngularVelocity => m_MaxAngularVelocity;
         [Space(10)]
         [SerializeField] private int m_MaxEnergy;
         public int MaxEnergy => m_MaxEnergy;
@@ -37,6 +39,9 @@ namespace SpaceShooter
         private float BaseMobility;
 
         [SerializeField] private bool m_IsPlayerShip;
+
+        [SerializeField] private Sprite m_ShipPreview;
+        public Sprite ShipPreview => m_ShipPreview;
 
         #region Public API
 

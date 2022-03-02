@@ -25,12 +25,13 @@ namespace SpaceShooter
         /// Start HP
         /// </summary>
         [SerializeField] private int m_HitPoints;
+        public int HP => m_HitPoints;
 
         /// <summary>
         /// Current HP
         /// </summary>
         private int m_CurrentHP;
-        public int HP => m_CurrentHP;
+        public int CurrentHP => m_CurrentHP;
 
         protected float timer;
 

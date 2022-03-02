@@ -9823,7 +9823,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c4cb77ce079865845b082fb5f1a16317, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a44028fcbd65ba84c9727d88326e5500, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9863,7 +9863,7 @@ GameObject:
   - component: {fileID: 7846712310584147230}
   - component: {fileID: 807228790112384100}
   m_Layer: 3
-  m_Name: Ship_01
+  m_Name: Ship_02
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9947,6 +9947,7 @@ MonoBehaviour:
   m_Bubble: {fileID: 804390872179925120}
   IsSpeedBoosted: 0
   m_IsPlayerShip: 1
+  m_ShipPreview: {fileID: 21300000, guid: a44028fcbd65ba84c9727d88326e5500, type: 3}
 --- !u!114 &807228790112384100
 MonoBehaviour:
   m_ObjectHideFlags: 0
