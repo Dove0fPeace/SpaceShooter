@@ -15,14 +15,18 @@ namespace SpaceShooter
         public float MaxLinearVelocity => m_MaxLinearVelocity;
         [SerializeField] private float m_MaxAngularVelocity;
         public float MaxAngularVelocity => m_MaxAngularVelocity;
+
         [Space(10)]
         [SerializeField] private int m_MaxEnergy;
         public int MaxEnergy => m_MaxEnergy;
         [SerializeField] private int m_MaxAmmo;
         public int MaxAmmo => m_MaxAmmo;
         [SerializeField] private int m_EnergyRegenPerSecond;
+
         private float m_PrimaryEnergy;
+        public float Energy => m_PrimaryEnergy;
         private int m_SecondaryAmmo;
+        public int Ammo => m_SecondaryAmmo;
 
         [Space(10)]
         [SerializeField] private TrailController trail;
@@ -212,9 +216,5 @@ namespace SpaceShooter
                 Player.Instance.AddKill();
             base.OnDeath(playersProjectile);
         }
-
-
-
-
     }
 }

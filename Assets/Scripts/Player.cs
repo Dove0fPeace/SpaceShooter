@@ -19,6 +19,10 @@ namespace SpaceShooter
 
         [SerializeField] private CinemachineVirtualCamera vcam;
         [SerializeField] private MovementController m_MovementController;
+        [Header("Recources view")]
+        [SerializeField] private HitPointView m_HitPointView;
+        [SerializeField] private ViewAmmo m_ViewAmmo;
+        [SerializeField] private ViewEnergy m_ViewEnergy;
 
         private Vector3 m_ExplosionPosition;
         private Quaternion m_ExplosionRotation;
@@ -64,7 +68,11 @@ namespace SpaceShooter
                 m_Ship.EventOnDeath.AddListener(OnShipDeath);
 
                 vcam.Follow = m_Ship.transform;
+
+                m_HitPointView.SetTargetShip(m_Ship);
                 m_MovementController.SetTargetShip(m_Ship);
+                m_ViewAmmo.SetTargetShip(m_Ship);
+                m_ViewEnergy.SetTargetShip(m_Ship);
             }
         }
 

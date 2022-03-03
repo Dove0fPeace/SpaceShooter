@@ -9948,6 +9948,7 @@ MonoBehaviour:
   IsSpeedBoosted: 0
   m_IsPlayerShip: 1
   m_ShipPreview: {fileID: 21300000, guid: a44028fcbd65ba84c9727d88326e5500, type: 3}
+  m_HPView: {fileID: 0}
 --- !u!114 &807228790112384100
 MonoBehaviour:
   m_ObjectHideFlags: 0

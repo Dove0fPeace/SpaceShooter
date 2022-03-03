@@ -4895,7 +4895,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0a7a1ca19cf45554795eda949760e6e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae8e78607d1da204d849f14982e24bc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4944,6 +4944,7 @@ MonoBehaviour:
   m_Lifetime: 3
   m_Damage: 200
   m_ImpactEffectPrefab: {fileID: 4204230044329112410, guid: e129809cf021b4d4696a64bb9ed1f2f0, type: 3}
+  IsPlayerProjectile: 0
 --- !u!70 &6088323101571612226
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4957,8 +4958,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.45454547, y: 0.85}
+  m_Offset: {x: 0.0021076202, y: 0.029511124}
+  m_Size: {x: 0.29855824, y: 0.9090223}
   m_Direction: 0
 --- !u!1 &8131739434740657796
 GameObject:

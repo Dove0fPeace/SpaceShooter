@@ -11,6 +11,8 @@ namespace SpaceShooter
         {
             SpaceShip ship = collision.transform.root.GetComponent<SpaceShip>();
 
+            if (ship.IsPlayersShip == false) return;
+
             if(ship != null && Player.Instance.ActiveShip)
             {
                 OnPickedUp(ship);
