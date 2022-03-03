@@ -12,7 +12,7 @@ namespace SpaceShooter
         {
             Destructible dest = collision.transform.root.GetComponent<Destructible>();
             if (dest != null)
-                dest.ApplyDamage(m_Damage);
+                dest.ApplyDamage(m_Damage, true);
         }
     }
 }

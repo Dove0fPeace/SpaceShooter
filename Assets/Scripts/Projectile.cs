@@ -48,10 +48,11 @@ namespace SpaceShooter
             Destructible dest = collision.transform.root.GetComponent<Destructible>();
             if (dest != null)
             {
-                dest.ApplyDamage(m_Damage);
+                dest.ApplyDamage(m_Damage, IsPlayerProjectile);
                 
                 if (IsPlayerProjectile)
                 {
+                    Debug.Log("Score++");
                     Player.Instance.AddScore(dest.ScoreValue);
                 }
             }

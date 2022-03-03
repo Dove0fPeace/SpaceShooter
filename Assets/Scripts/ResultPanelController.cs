@@ -37,7 +37,6 @@ namespace SpaceShooter
             m_Kills.text = "Kills : " + levelResult.numKills.ToString();
             m_Score.text = "Score : " + levelResult.score.ToString();
             m_Time.text = "Time : " + levelResult.time.ToString();
-
         }
 
         public void OnButtonNextAction()

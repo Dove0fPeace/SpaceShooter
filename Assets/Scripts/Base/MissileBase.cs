@@ -15,6 +15,8 @@ namespace SpaceShooter
 
         [SerializeField] private ImpactEffect m_ImpactEffect;
 
+        public bool IsPlayersRocket;
+
         private void Update()
         {
             m_Lifetime -= Time.deltaTime;
@@ -34,7 +36,7 @@ namespace SpaceShooter
         {
             Destructible dest = collision.transform.root.GetComponent<Destructible>();
             if (dest != null)
-                dest.ApplyDamage(m_Damage);
+                dest.ApplyDamage(m_Damage, IsPlayersRocket);
         }
 
         protected virtual void OnMissileLifeEnd()

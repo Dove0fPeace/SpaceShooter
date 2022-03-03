@@ -38,7 +38,9 @@ namespace SpaceShooter
         private float BaseThrust;
         private float BaseMobility;
 
+        [Header("bool Is Players Ship")]
         [SerializeField] private bool m_IsPlayerShip;
+        public bool IsPlayersShip => m_IsPlayerShip;
 
         [SerializeField] private Sprite m_ShipPreview;
         public Sprite ShipPreview => m_ShipPreview;
@@ -204,8 +206,15 @@ namespace SpaceShooter
             m_PrimaryEnergy = Mathf.Clamp(m_PrimaryEnergy, 0, m_MaxEnergy);
         }
 
+        protected override void OnDeath(bool playersProjectile)
+        {
+            if (playersProjectile == true && m_IsPlayerShip == false)
+                Player.Instance.AddKill();
+            base.OnDeath(playersProjectile);
+        }
 
 
-        
+
+
     }
 }

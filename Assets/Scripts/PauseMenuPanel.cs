@@ -15,14 +15,14 @@ namespace SpaceShooter
 
         public void OnButtonShowPause()
         {
-            Time.timeScale = 0;
             gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
 
         public void OnButtonContinue()
         {
-            Time.timeScale = 1;
             gameObject.SetActive(false);
+            Time.timeScale = 1;
         }
 
         public void OnButtonMainMenu()

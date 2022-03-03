@@ -50,13 +50,13 @@ namespace SpaceShooter
 
         #region Public API
 
-        public void ApplyDamage(int damage)
+        public virtual void ApplyDamage(int damage, bool playersProjectile)
         {
             if (m_Indestructible) return;
 
             m_CurrentHP -= damage;
             if (m_CurrentHP <= 0)
-                OnDeath();
+                OnDeath(playersProjectile);
         }
 
         public Vector3 PositionPrediction()
@@ -67,7 +67,7 @@ namespace SpaceShooter
 
         #endregion
 
-        protected virtual void OnDeath()
+        protected virtual void OnDeath(bool playersProjectile)
         {
             m_EventOnDeath?.Invoke();
             Destroy(gameObject);

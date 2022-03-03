@@ -40,7 +40,8 @@ namespace SpaceShooter
             LastLevelSuccess = success;
 
             CalculateLevelStatistic();
-            ResultPanelController.Instance?.ShowResults(LevelStatistics, success);
+
+            ResultPanelController.Instance.ShowResults(LevelStatistics, LastLevelSuccess);
         }
 
         public void AdvanceLevel()
@@ -61,6 +62,7 @@ namespace SpaceShooter
 
         private void CalculateLevelStatistic()
         {
+
             LevelStatistics.score = Player.Instance.Score;
             LevelStatistics.numKills = Player.Instance.NumKills;
             LevelStatistics.time = (int)LevelController.Instance.LevelTime;

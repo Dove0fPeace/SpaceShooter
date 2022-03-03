@@ -18,20 +18,20 @@ namespace SpaceShooter
         public int SmallAsteroidsNum => m_SmallAsteroidsNum;
 
 
-        protected override void OnDeath()
+        protected override void OnDeath(bool playersProjectile)
         {
-
-             for(int i = 0; i < m_SmallAsteroidsNum; i++)
+            for (int i = 0; i < m_SmallAsteroidsNum; i++)
             {
                 Vector2 pos = this.transform.position;
                 pos += Random.insideUnitCircle * 0.5f;
 
-                 int index = Random.Range(0, m_SmallAsteroid.Length);
+                int index = Random.Range(0, m_SmallAsteroid.Length);
                 GameObject asteroid = Instantiate(m_SmallAsteroid[index].gameObject, pos, this.transform.rotation);
 
                 asteroid.GetComponent<Asteroid>().SetTrajectory(Random.insideUnitCircle.normalized);
             }
-            base.OnDeath();
+
+            base.OnDeath(playersProjectile);
         }
 
         private void SetTrajectory(Vector2 direction)

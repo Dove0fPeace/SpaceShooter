@@ -16,11 +16,16 @@ namespace SpaceShooter
         {
             if (collision.transform.tag == IgnoreTag || collision.transform.tag == IgnoreTag2) return;
 
+            bool player = false;
+            if (collision.transform.root.GetComponent<SpaceShip>()?.IsPlayersShip == true)
+                player = true;
+
             var destructible = transform.root.GetComponent<Destructible>();
+
 
             if(destructible != null )
             {
-                destructible.ApplyDamage(m_DamageConstant + (int)(m_VelocityDamageModifier * collision.relativeVelocity.magnitude));
+                destructible.ApplyDamage(m_DamageConstant + (int)(m_VelocityDamageModifier * collision.relativeVelocity.magnitude), player);
             }
         }
     }
