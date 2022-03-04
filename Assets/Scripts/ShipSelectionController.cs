@@ -33,6 +33,7 @@ namespace SpaceShooter
             LevelSequenceController.PlayerShip = m_ShipPrefab;
 
             MainMenuController.Instance.gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }

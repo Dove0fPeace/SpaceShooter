@@ -50,9 +50,8 @@ namespace SpaceShooter
             {
                 dest.ApplyDamage(m_Damage, IsPlayerProjectile);
                 
-                if (IsPlayerProjectile)
+                if (IsPlayerProjectile && dest.TeamID != Destructible.TeamIDNeutral)
                 {
-                    Debug.Log("Score++");
                     Player.Instance.AddScore(dest.ScoreValue);
                 }
             }

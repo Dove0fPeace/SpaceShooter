@@ -1,0 +1,4 @@
+PlayerPrefs
+All kills = All kills
+All score = Score
+All time = All time

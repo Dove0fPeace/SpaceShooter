@@ -30,7 +30,7 @@ namespace SpaceShooter
 
                 asteroid.GetComponent<Asteroid>().SetTrajectory(Random.insideUnitCircle.normalized);
             }
-
+            Player.Instance.AddScore(ScoreValue);
             base.OnDeath(playersProjectile);
         }
 

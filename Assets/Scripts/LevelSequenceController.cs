@@ -40,6 +40,7 @@ namespace SpaceShooter
             LastLevelSuccess = success;
 
             CalculateLevelStatistic();
+            SaveGlobalStatistics();
 
             ResultPanelController.Instance.ShowResults(LevelStatistics, LastLevelSuccess);
         }
@@ -62,10 +63,23 @@ namespace SpaceShooter
 
         private void CalculateLevelStatistic()
         {
-
-            LevelStatistics.score = Player.Instance.Score;
+            float score = Player.Instance.Score * LevelController.Instance.m_ScoreMultiiplier;
+            LevelStatistics.score = (int)score;
             LevelStatistics.numKills = Player.Instance.NumKills;
             LevelStatistics.time = (int)LevelController.Instance.LevelTime;
+        }
+
+        private void SaveGlobalStatistics()
+        {
+            int allScore = PlayerPrefs.GetInt("Score") + LevelStatistics.score;
+            int AllKills = PlayerPrefs.GetInt("All kills") + LevelStatistics.numKills;
+            int AllTime = PlayerPrefs.GetInt("All time") + LevelStatistics.time;
+
+            PlayerPrefs.SetInt("Score", allScore);
+            PlayerPrefs.SetInt("All kills", AllKills);
+            PlayerPrefs.SetInt("All time", AllTime);
+
+            PlayerPrefs.Save();
         }
     }
 }

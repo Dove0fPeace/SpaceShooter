@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 namespace SpaceShooter
 {
-
     public class HitPointView : MonoBehaviour
     {
-        [SerializeField] private TMP_Text m_HPText;
+        [SerializeField] private Image m_Mask;
         private SpaceShip m_TargetShip;
+
+        private float m_OriginalSize;
+
+        private void Start()
+        {
+            m_OriginalSize = m_Mask.rectTransform.rect.width;
+        }
 
         public void SetTargetShip(SpaceShip ship)
         {
@@ -18,12 +24,12 @@ namespace SpaceShooter
 
         private void Update()
         {
-            ShowCurrentHP(m_TargetShip.CurrentHP, m_TargetShip.HP);
+            ShowCurrentHP((float)m_TargetShip.CurrentHP/ (float)m_TargetShip.HP);
         }
 
-        public void ShowCurrentHP(int currentHP, int maxHP)
+        public void ShowCurrentHP(float value)
         {
-            m_HPText.text = "HitPoint: " + currentHP.ToString() + "/" + maxHP.ToString();
+            m_Mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, m_OriginalSize * value);
         }
     }
 }

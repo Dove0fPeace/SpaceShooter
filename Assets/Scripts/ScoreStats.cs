@@ -20,11 +20,11 @@ namespace SpaceShooter
         {
             if(Player.Instance != null)
             {
-                int currentScore = Player.Instance.Score;
+                float currentScore = Player.Instance.Score;
 
                 if (m_LastScore != currentScore)
                 {
-                    m_LastScore = currentScore;
+                    m_LastScore = (int)currentScore;
 
                     m_Text.text = "Score : " + m_LastScore.ToString();
                 }

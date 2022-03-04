@@ -9,6 +9,7 @@ namespace SpaceShooter
         [SerializeField] private SpaceShip m_DefaultSpaceShip;
         [SerializeField] private GameObject m_EpisodeSelection;
         [SerializeField] private GameObject m_ShipSelection;
+        [SerializeField] private GameObject m_AllStats;
 
         private void Start()
         {
@@ -26,6 +27,11 @@ namespace SpaceShooter
         {
             m_ShipSelection.SetActive(true);
             gameObject.SetActive(false);
+        }
+
+        public void OnButtonAllStats()
+        {
+            m_AllStats.SetActive(true);
         }
 
         public void OnButtonExit()

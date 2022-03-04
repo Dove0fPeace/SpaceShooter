@@ -13,6 +13,9 @@ namespace SpaceShooter
         [SerializeField] private int m_TeamID;
         public int TeamID => m_TeamID;
 
+        [SerializeField] private float m_ScoreValue;
+        public float ScoreValue => m_ScoreValue;
+
         [SerializeField] private float m_PredictionMultiply = 1.3f;
 
         public const int TeamIDNeutral = 0;
@@ -93,11 +96,5 @@ namespace SpaceShooter
         {
             m_AllDestructibles.Remove(this);
         }
-        #region Score
-
-        [SerializeField] private int m_ScoreValue;
-        public int ScoreValue => m_ScoreValue;
-
-        #endregion
     }
 }

@@ -83,7 +83,7 @@ namespace SpaceShooter
 
         #region Score
 
-        public int Score { get; private set; }
+        public float Score { get; private set; }
         public int NumKills { get; private set; }
 
         public void AddKill()
@@ -91,7 +91,7 @@ namespace SpaceShooter
             NumKills++;
         }
 
-        public void AddScore(int num)
+        public void AddScore(float num)
         {
             Score += num;
         }

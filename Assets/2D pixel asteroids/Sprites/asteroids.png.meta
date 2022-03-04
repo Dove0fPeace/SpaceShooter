@@ -78,6 +78,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -556,6 +557,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      aster-med-5: 21300022
+      aster-med-3: 21300018
+      aster-small-4: 21300030
+      aster-small-2: 21300026
+      aster-huge-3: 21300004
+      aster-small-5: 21300032
+      aster-big-2: 21300008
+      aster-med-1: 21300014
+      aster-big-1: 21300006
+      aster-small-1: 21300024
+      aster-small-6: 21300034
+      aster-med-2: 21300016
+      aster-med-4: 21300020
+      aster-huge-1: 21300000
+      aster-big-4: 21300012
+      aster-big-3: 21300010
+      aster-huge-2: 21300002
+      aster-small-3: 21300028
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
