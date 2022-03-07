@@ -10,7 +10,8 @@ namespace SpaceShooter
         public static string IgnoreTag2 = "Projectile";
 
         [SerializeField] private float m_VelocityDamageModifier;
-        [SerializeField] private int m_DamageConstant;
+        [SerializeField] private int m_NonLethalDamage;
+        private int m_DamageConstant;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -22,7 +23,17 @@ namespace SpaceShooter
 
             var destructible = transform.root.GetComponent<Destructible>();
 
+            Asteroid asteroid = collision.transform.GetComponent<Asteroid>();
 
+            if(asteroid != null)
+            {
+                m_DamageConstant = 9999;
+            }
+            else
+            {
+                m_DamageConstant = m_NonLethalDamage;
+            }
+            
             if(destructible != null )
             {
                 destructible.ApplyDamage(m_DamageConstant + (int)(m_VelocityDamageModifier * collision.relativeVelocity.magnitude), player);

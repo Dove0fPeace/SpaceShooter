@@ -22,7 +22,7 @@ namespace SpaceShooter
         [SerializeField] protected bool m_Indestructible;
         public bool IsIndestructible => m_Indestructible;
 
-        private Rigidbody2D _thisRB;
+        protected Rigidbody2D _thisRB;
 
         /// <summary>
         /// Start HP

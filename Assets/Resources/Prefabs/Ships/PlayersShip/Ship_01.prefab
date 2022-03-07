@@ -9946,13 +9946,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Nickname: Player's Ship
   m_TeamID: 1
+  m_ScoreValue: 0
   m_PredictionMultiply: 1
   m_Indestructible: 0
   m_HitPoints: 100
   m_EventOnDeath:
     m_PersistentCalls:
       m_Calls: []
-  m_ScoreValue: 0
   m_Mass: 2
   m_Trust: 600
   m_Mobility: 1000
@@ -9983,7 +9983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_VelocityDamageModifier: 2
-  m_DamageConstant: 1
+  m_NonLethalDamage: 10
 --- !u!1 &6558405220069028975
 GameObject:
   m_ObjectHideFlags: 0
@@ -10029,7 +10029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Mode: 1
-  m_TurretProperties: {fileID: 11400000, guid: c3532beced816c349b70d6b2164c25b4, type: 2}
+  m_TurretProperties: {fileID: 11400000, guid: bf2c23a246fd95248b1f4b925d12f245, type: 2}
 --- !u!1 &8207601285164282426
 GameObject:
   m_ObjectHideFlags: 0

@@ -188,3 +188,4 @@ MonoBehaviour:
   - {fileID: -8789644812663969618, guid: 73d0578dde8635c4db633cbe78f8af97, type: 3}
   m_Speed: 2
   m_SmallAsteroidsNum: 4
+  m_IsDebris: 1

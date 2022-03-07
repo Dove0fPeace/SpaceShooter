@@ -17,20 +17,35 @@ namespace SpaceShooter
         [SerializeField] private int m_SmallAsteroidsNum;
         public int SmallAsteroidsNum => m_SmallAsteroidsNum;
 
+        [SerializeField] private bool m_IsDebris;
+        public bool IsDebris => m_IsDebris;
+
+        protected override void Start()
+        {
+            base.Start();
+            if(m_IsDebris == false)
+            {
+                _thisRB.bodyType = RigidbodyType2D.Static;
+            }
+        }
+
 
         protected override void OnDeath(bool playersProjectile)
         {
-            for (int i = 0; i < m_SmallAsteroidsNum; i++)
+            if (m_IsDebris)
             {
-                Vector2 pos = this.transform.position;
-                pos += Random.insideUnitCircle * 0.5f;
+                for (int i = 0; i < m_SmallAsteroidsNum; i++)
+                {
+                    Vector2 pos = this.transform.position;
+                    pos += Random.insideUnitCircle * 0.5f;
 
-                int index = Random.Range(0, m_SmallAsteroid.Length);
-                GameObject asteroid = Instantiate(m_SmallAsteroid[index].gameObject, pos, this.transform.rotation);
+                    int index = Random.Range(0, m_SmallAsteroid.Length);
+                    GameObject asteroid = Instantiate(m_SmallAsteroid[index].gameObject, pos, this.transform.rotation);
 
-                asteroid.GetComponent<Asteroid>().SetTrajectory(Random.insideUnitCircle.normalized);
+                    asteroid.GetComponent<Asteroid>().SetTrajectory(Random.insideUnitCircle.normalized);
+                }
+                Player.Instance.AddScore(ScoreValue);
             }
-            Player.Instance.AddScore(ScoreValue);
             base.OnDeath(playersProjectile);
         }
 
@@ -41,6 +56,9 @@ namespace SpaceShooter
             this.GetComponent<Rigidbody2D>().velocity = direction * m_Speed;
         }
 
-
+        public void ExplodeAsteroid()
+        {
+            OnDeath(false);
+        }
     }
 }

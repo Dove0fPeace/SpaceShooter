@@ -11,7 +11,16 @@ namespace SpaceShooter
         {
             SpaceShip ship = collision.transform.root.GetComponent<SpaceShip>();
 
-            if (ship.IsPlayersShip == false) return;
+            if (ship == null)
+            {
+                Debug.Log("Collision != ship");
+                return;
+            }
+            if (ship.IsPlayersShip == false)
+            {
+                Debug.Log("Is player ship == false");
+                return;
+            }
 
             if(ship != null && Player.Instance.ActiveShip)
             {

@@ -170,3 +170,4 @@ MonoBehaviour:
   - {fileID: 0}
   m_Speed: 2
   m_SmallAsteroidsNum: 0
+  m_IsDebris: 1
