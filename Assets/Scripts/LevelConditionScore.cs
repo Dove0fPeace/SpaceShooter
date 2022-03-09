@@ -27,6 +27,7 @@ namespace SpaceShooter
             {
                 if(Player.Instance != null && Player.Instance.ActiveShip != null)
                 {
+
                     if(Player.Instance.Score >= m_Score)
                     {
                         m_Reached = true;

@@ -22,7 +22,7 @@ namespace SpaceShooter
             m_BackMaterial.mainTextureScale = Vector2.one * m_TextureScale;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             Vector2 offset = m_InitialOffset;
 

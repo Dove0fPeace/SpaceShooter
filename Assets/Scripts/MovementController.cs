@@ -54,12 +54,38 @@ namespace SpaceShooter
             m_TargetShip.TrustControl = Mathf.Max(0, dot);
             m_TargetShip.TorqueControl = dot2;
 
-            if(m_MobileFirePrimary.IsHold == true || Input.GetAxis("Fire1") != 0)
+            if(m_ControlMode == ControlMode.Keyboard)
+            {
+                KeyboardControl();
+            }
+
+            if(m_ControlMode == ControlMode.Mobile)
+            {
+                MobileControl();
+            }
+        }
+
+        private void KeyboardControl()
+        {
+            if (Input.GetAxis("Fire1") != 0)
             {
                 m_TargetShip.Fire(TurretMode.Primary);
             }
 
-            if (m_MobileFireSecondary.IsHold == true|| Input.GetAxis("Fire2") != 0)
+            if (Input.GetAxis("Fire2") != 0)
+            {
+                m_TargetShip.Fire(TurretMode.Secondary);
+            }
+        }
+
+        private void MobileControl()
+        {
+            if (m_MobileFirePrimary.IsHold == true)
+            {
+                m_TargetShip.Fire(TurretMode.Primary);
+            }
+
+            if (m_MobileFireSecondary.IsHold == true)
             {
                 m_TargetShip.Fire(TurretMode.Secondary);
             }

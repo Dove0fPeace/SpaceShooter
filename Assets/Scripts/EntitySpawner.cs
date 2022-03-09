@@ -13,7 +13,9 @@ namespace SpaceShooter
             Loop
         }
 
-        [SerializeField] private Entity[] m_EntityPrefabs;
+        [SerializeField] private AIPointPatrol m_PatrolPoint;
+
+        [SerializeField] private AIController[] m_EntityPrefabs;
 
         [SerializeField] private CircleArea m_CircleArea;
 
@@ -57,6 +59,7 @@ namespace SpaceShooter
                 GameObject e = Instantiate(m_EntityPrefabs[index].gameObject);
 
                 e.transform.position = m_CircleArea.GetRandomInsideZone();
+                e.GetComponent<AIController>().SetPatrolBehaviour(m_PatrolPoint);
             }
         }
     }

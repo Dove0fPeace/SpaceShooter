@@ -12,6 +12,7 @@ namespace SpaceShooter
 
         [SerializeField] private int m_TeamID;
         public int TeamID => m_TeamID;
+        [SerializeField] private bool Enemy;
 
         [SerializeField] private float m_ScoreValue;
         public float ScoreValue => m_ScoreValue;
@@ -83,17 +84,32 @@ namespace SpaceShooter
         private static HashSet<Destructible> m_AllDestructibles;
         public static IReadOnlyCollection<Destructible> AllDestructibles => m_AllDestructibles;
 
+        private static HashSet<Destructible> m_Enemies;
+        public static IReadOnlyCollection<Destructible> Enemies => m_Enemies;
+
         protected virtual void OnEnable()
         {
             if(m_AllDestructibles == null)
             {
                 m_AllDestructibles = new HashSet<Destructible>();
             }
+            if(m_Enemies == null)
+            {
+                m_Enemies = new HashSet<Destructible>();
+            }
+            if(Enemy)
+            {
+                m_Enemies.Add(this);
+            }
             m_AllDestructibles.Add(this);
         }
 
         protected virtual void OnDestroy()
         {
+            if(Enemy)
+            {
+                m_Enemies.Remove(this);
+            }
             m_AllDestructibles.Remove(this);
         }
     }
