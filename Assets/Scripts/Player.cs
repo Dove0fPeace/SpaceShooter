@@ -24,6 +24,10 @@ namespace SpaceShooter
         [SerializeField] private ViewAmmo m_ViewAmmo;
         [SerializeField] private ViewEnergy m_ViewEnergy;
 
+        [Space(10)]
+        [SerializeField] private bool m_Racing;
+        [SerializeField] private Boss m_boss;
+
         private Vector3 m_ExplosionPosition;
         private Quaternion m_ExplosionRotation;
 
@@ -66,6 +70,7 @@ namespace SpaceShooter
                 var newPlayerShip = Instantiate(LevelSequenceController.PlayerShip);
                 m_Ship = newPlayerShip.GetComponent<SpaceShip>();
                 m_Ship.EventOnDeath.AddListener(OnShipDeath);
+                m_Ship.SetDamageMode(m_Racing);
 
                 vcam.Follow = m_Ship.transform;
 
@@ -73,6 +78,8 @@ namespace SpaceShooter
                 m_MovementController.SetTargetShip(m_Ship);
                 m_ViewAmmo.SetTargetShip(m_Ship);
                 m_ViewEnergy.SetTargetShip(m_Ship);
+                if (m_boss != null)
+                    m_boss.SetPlayerShip(m_Ship);
             }
         }
 

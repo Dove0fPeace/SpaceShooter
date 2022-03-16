@@ -65,7 +65,7 @@ namespace SpaceShooter
 
         public Vector3 PositionPrediction()
         {
-            Vector3 pos = (Vector2)transform.position + _thisRB.velocity * m_PredictionMultiply;
+            Vector3 pos = (Vector2)transform.position + (_thisRB.velocity * m_PredictionMultiply);
             return pos;
         }
 

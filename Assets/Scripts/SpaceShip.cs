@@ -49,6 +49,12 @@ namespace SpaceShooter
         [SerializeField] private Sprite m_ShipPreview;
         public Sprite ShipPreview => m_ShipPreview;
 
+        [Space(10)]
+        [SerializeField] private bool m_DamageSlowDownTheShip;
+        private bool m_Slowed;
+        [SerializeField] private float m_SlowTime;
+        [SerializeField] private float m_PowerOfSlowDown;
+
         #region Public API
 
         public float TrustControl { get; set; }
@@ -125,7 +131,23 @@ namespace SpaceShooter
             m_Indestructible = true;
             m_Bubble.SetActive(true);
         }
+        public override void ApplyDamage(int damage, bool playersProjectile)
+        {
+            if (m_DamageSlowDownTheShip)
+            {
+                m_Slowed = true;
+                m_Trust -= m_PowerOfSlowDown;
+            }
+            else
+            {
+                base.ApplyDamage(damage, playersProjectile);
+            }
+        }
 
+        public void SetDamageMode(bool mode)
+        {
+            m_DamageSlowDownTheShip = mode;
+        }
         #endregion
 
         #region Unity Events
@@ -171,6 +193,17 @@ namespace SpaceShooter
                     m_Indestructible = false;
                 }
             }
+
+            if(m_Slowed == true)
+            {
+                m_SlowTime -= Time.deltaTime;
+                if(m_SlowTime <= 0)
+                {
+                    m_Slowed = false;
+                    m_Trust += m_PowerOfSlowDown;
+                }
+            }
+
         }
 
         private void FixedUpdate()

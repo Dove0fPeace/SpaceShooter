@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ae529c46f77194abccd37c8dd91b13, type: 3}
   m_Name: Episode_A
   m_EditorClassIdentifier: 
-  m_EpisodeName: Episode A
+  m_EpisodeName: Asteroids
   m_Levels:
   - EP_A_01
   - EP_A_02
   - EP_A_03
-  m_PreviewImage: {fileID: 0}
+  m_PreviewImage: {fileID: 21300000, guid: d609b6e18914eae4381c7c8fb3a304ee, type: 3}

@@ -8,7 +8,7 @@ namespace SpaceShooter
     public class HitPointView : MonoBehaviour
     {
         [SerializeField] private Image m_Mask;
-        private SpaceShip m_TargetShip;
+        [SerializeField] private Destructible m_Target;
 
         private float m_OriginalSize;
 
@@ -19,12 +19,14 @@ namespace SpaceShooter
 
         public void SetTargetShip(SpaceShip ship)
         {
-            m_TargetShip = ship;
+            m_Target = ship;
         }
 
         private void Update()
         {
-            ShowCurrentHP((float)m_TargetShip.CurrentHP/ (float)m_TargetShip.HP);
+            if (m_Target == null) return;
+
+            ShowCurrentHP((float)m_Target.CurrentHP/ (float)m_Target.HP);
         }
 
         public void ShowCurrentHP(float value)

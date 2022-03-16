@@ -181,9 +181,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Nickname: 
   m_TeamID: 0
+  Enemy: 0
   m_ScoreValue: 4
   m_PredictionMultiply: 1.3
-  m_Indestructible: 1
+  m_Indestructible: 0
   m_HitPoints: 200
   m_EventOnDeath:
     m_PersistentCalls:

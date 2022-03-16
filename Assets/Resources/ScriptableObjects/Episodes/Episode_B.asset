@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ae529c46f77194abccd37c8dd91b13, type: 3}
   m_Name: Episode_B
   m_EditorClassIdentifier: 
-  m_EpisodeName: Episode B
+  m_EpisodeName: Aliens
   m_Levels:
-  - EP_A_03
-  m_PreviewImage: {fileID: 0}
+  - EP_B_01
+  - EP_B_02
+  - EP_B_03
+  m_PreviewImage: {fileID: 21300000, guid: b99f03459382e3448a374d711a537658, type: 3}

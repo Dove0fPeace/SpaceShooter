@@ -12,10 +12,15 @@ namespace SpaceShooter
         {
             Null,
             Patrol,
+            Racing,
         }
 
         [SerializeField] private CircleArea m_Area;
         [SerializeField] private AIBehaviour m_AIBehaviour;
+
+        [Header("Racing")]
+        [SerializeField] private RaceAITargetArea m_FirstRaceTarget;
+        [Space(10)]
 
         [SerializeField] private AIPointPatrol m_PatrolPoint;
 
@@ -39,6 +44,7 @@ namespace SpaceShooter
         private SpaceShip m_SpaceShip;
 
         private Vector3 m_MovePosition;
+        private Vector3 m_RaceTargetPoint;
 
         private Destructible m_SelectTarget;
 
@@ -61,6 +67,11 @@ namespace SpaceShooter
             m_SpaceShip = GetComponent<SpaceShip>();
 
             InitTimers();
+
+            if(m_AIBehaviour == AIBehaviour.Racing)
+            {
+                m_RaceTargetPoint = m_FirstRaceTarget.GetRandonTargetPoint();
+            }
 
         }
 
@@ -104,21 +115,39 @@ namespace SpaceShooter
             m_Waypoint = point;
             m_MovePosition = m_Waypoint.transform.position;
         }
+
+        public void SetNextRaceTarget(Vector2 target)
+        {
+            m_RaceTargetPoint = target;
+        }
         private void UpdateAI()
         {
-            if(m_AIBehaviour == AIBehaviour.Patrol)
+            switch(m_AIBehaviour)
             {
-                UpdateBehaviourPatrol();
-            }
+                case AIBehaviour.Patrol:
+                    UpdateBehaviourPatrol();
+                    break;
+
+                case AIBehaviour.Racing:
+                    UpdateBehaviourRacing();
+                    break;
+            } 
         }
 
         private void UpdateBehaviourPatrol()
         {
-            ActionFindNewMovePosition();
             ActionControlShip();
+            ActionFindNewMovePosition();
             ActionFindNewAttackTarget();
             ActionFire();
             ActionEvadeCollision();
+        }
+
+        private void UpdateBehaviourRacing()
+        {
+            ActionControlShip();
+            ActionEvadeCollision();
+            ActionFindNewMovePosition();
         }
 
         private Destructible FindNearestDestructibleTarget()
@@ -202,6 +231,10 @@ namespace SpaceShooter
                         }
                     }
                 }
+            }
+            if(m_AIBehaviour == AIBehaviour.Racing)
+            {
+                m_MovePosition = m_RaceTargetPoint;
             }
         }
         

@@ -13,12 +13,10 @@ namespace SpaceShooter
 
             if (ship == null)
             {
-                Debug.Log("Collision != ship");
                 return;
             }
             if (ship.IsPlayersShip == false)
             {
-                Debug.Log("Is player ship == false");
                 return;
             }
 

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_VirtualJoystick: {fileID: 0}
   m_MobileFirePrimary: {fileID: 0}
   m_MobileFireSecondary: {fileID: 0}
-  m_ControlMode: 0
+  m_ControlMode: 1
 --- !u!114 &9150253798611739154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,3 +73,5 @@ MonoBehaviour:
   m_HitPointView: {fileID: 0}
   m_ViewAmmo: {fileID: 0}
   m_ViewEnergy: {fileID: 0}
+  m_Racing: 0
+  m_boss: {fileID: 0}
